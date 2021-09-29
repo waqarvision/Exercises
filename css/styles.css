@@ -1,0 +1,137 @@
+/* Primary */
+body {
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Table */
+table,
+td,
+th {
+  border: 2px solid #c4dcf3;
+  border-collapse: collapse;
+  padding: 14px;
+}
+th {
+  background-color: #427fef;
+  border: none;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #eef7ff;
+}
+
+/* Box */
+.box {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: tomato;
+  box-shadow: 10px 10px lightgrey;
+}
+
+/* nav */
+nav {
+  border: 2px solid black;
+  display: flex;
+  width: fit-content;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.nav-ul {
+  background-color: black;
+  list-style-type: none;
+  color: white;
+  margin-block-start: 0;
+}
+.nav-li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+    background-color: black;
+  }
+  .nav-ul {
+    display: flex;
+  }
+}
+
+/* Grid for images */
+.grid {
+  display: grid;
+  grid-template: repeat(9, auto) / repeat(1, auto);
+  gap: 2px;
+
+  align-content: stretch;
+  justify-content: stretch;
+}
+.box {
+  width: auto;
+  height: auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template: repeat(5, auto) / repeat(2, auto);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template: repeat(4, auto) / 33% 33.33% 33.34%;
+  }
+  .box-two {
+    grid-row: 1 / 3;
+    grid-column: 2 / 5;
+  }
+}
+
+/* FIXME: Blog Post */
+.blog {
+  /* width: 1140px; */
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+.blog--img {
+  width: auto;
+}
+.blog-img {
+  height: 40vh;
+  object-fit: cover;
+}
+
+/* TODO: Hubble Banner */
+.hubble {
+  width: auto;
+  height: 100vh;
+  background: url(../images/bg-gradient.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hubble-span {
+  display: block;
+  background: blueviolet;
+  padding: 10px;
+}
